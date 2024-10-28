@@ -3,9 +3,6 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      colors: {
-        customLightYellow: '#FFFBEC',
-      },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
       },

@@ -3,6 +3,9 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      colors: {
+        bgDark: '#0F172A',
+      },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
       },
@@ -11,8 +14,7 @@ export default {
       },
       container: {
         padding: {
-          DEFAULT: '1rem',
-          sm: '5rem',
+          DEFAULT: '5rem',
         },
       },
       letterSpacing: {

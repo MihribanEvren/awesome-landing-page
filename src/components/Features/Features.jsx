@@ -1,27 +1,39 @@
+import { Trophy, Tv, Sailboat } from 'lucide-react';
+import FeatureCard from './FeatureCard';
+
 const Features = () => {
   const features = [
     {
       title: 'Nibh viverra',
       description:
         'Sit bibendum donec dolor fames neque vulputate non vit aliquam. Consequat turpis natoque leo, massa.',
-      icon: '🏆',
+      icon: <Trophy />,
     },
     {
       title: 'Cursus amet',
       description:
         'Sit bibendum donec dolor fames neque vulputate non vit aliquam. Consequat turpis natoque leo, massa.',
-      icon: '💰',
+      icon: <Sailboat />,
     },
     {
       title: 'Ipsum fermentum',
       description:
         'Sit bibendum donec dolor fames neque vulputate non vit aliquam. Consequat turpis natoque leo, massa.',
-      icon: '📦',
+      icon: <Tv />,
     },
   ];
 
   return (
-    <div className="px-4 py-16 md:px-8 lg:px-16 bg-cream-50">Features</div>
+    <div className="flex items-center justify-start w-full gap-20 py-20">
+      {features.map((feature, index) => (
+        <FeatureCard
+          key={index}
+          icon={feature.icon}
+          title={feature.title}
+          description={feature.description}
+        />
+      ))}
+    </div>
   );
 };
 

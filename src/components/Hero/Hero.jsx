@@ -1,5 +1,5 @@
 import Button from '../SharedElements/Button';
-import Sneaker from '../../assets/PexelsPhoto.png';
+import Sneaker from '../../assets/images/PexelsPhoto.png';
 
 const Hero = () => {
   return (

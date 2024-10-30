@@ -1,5 +1,5 @@
 import Button from '../SharedElements/Button';
-import Video from '../../assets/Video.png';
+import Video from '../../assets/images/Video.png';
 import { Check } from 'lucide-react';
 import ImageContainer from '../SharedElements/ImageContainer';
 import PlayOverlay from '../SharedElements/PlayOverlay';

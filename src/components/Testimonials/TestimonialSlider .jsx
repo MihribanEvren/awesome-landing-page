@@ -26,7 +26,7 @@ const TestimonialSlider = ({ testimonials, onNext, onPrev }) => {
   }, [emblaApi, onNext]);
 
   return (
-    <div className="relative py-20">
+    <div className="relative pt-20">
       <div className="p-6 overflow-hidden" ref={emblaRef}>
         <div className="flex flex-row gap-6">
           {testimonials.map((testimonial, index) => (

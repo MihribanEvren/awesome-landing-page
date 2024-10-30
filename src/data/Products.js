@@ -1,7 +1,7 @@
 // src/data/Products.js
-import Product1 from '../assets/Product1.png';
-import Product2 from '../assets/Product2.png';
-import Product3 from '../assets/Product3.png';
+import Product1 from '../assets/images/Product1.png';
+import Product2 from '../assets/images/Product2.png';
+import Product3 from '../assets/images/Product3.png';
 
 const Products = [
   {

@@ -1,35 +1,51 @@
 import TestimonialSlider from './TestimonialSlider ';
 import testimonialData from '../../data/Testimonials';
-import { useState } from 'react';
+import { useRef } from 'react';
+import Button from '../SharedElements/Button';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 function Testimonials() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderRef = useRef(null);
 
   const handleNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % testimonialData.length);
+    if (sliderRef.current) {
+      sliderRef.current.scrollNext();
+    }
   };
 
   const handlePrev = () => {
-    setCurrentSlide(
-      (prev) => (prev - 1 + testimonialData.length) % testimonialData.length
-    );
+    if (sliderRef.current) {
+      sliderRef.current.scrollPrev();
+    }
   };
+
   return (
-    <div className="gap-20 p-20">
-      <div className="flex items-center justify-between gap-12">
-        <h2 className="text-[56px] font-extrabold leading-tight text-slate-900">
+    <div className="bg-amber-50">
+      <div className="flex flex-col items-center justify-between px-4 pt-12 md:flex-row md:mb-0 lg:px-20 md:pt-20">
+        <h2 className="text-[32px] md:text-[56px] font-bold md:font-extrabold leading-tight text-slate-900 md:mb-0">
           Because they love us
         </h2>
+
+        <div className="items-center hidden gap-6 md:flex">
+          <Button
+            onClick={handlePrev}
+            text=""
+            size="md"
+            iconLeft={<ChevronLeft />}
+          />
+          <Button
+            onClick={handleNext}
+            size="md"
+            text=""
+            iconRight={<ChevronRight />}
+          />
+        </div>
       </div>
+
       <div>
-        <TestimonialSlider
-          testimonials={testimonialData}
-          onNext={handleNext}
-          onPrev={handlePrev}
-        />
+        <TestimonialSlider ref={sliderRef} testimonials={testimonialData} />
       </div>
     </div>
   );
 }
-
 export default Testimonials;

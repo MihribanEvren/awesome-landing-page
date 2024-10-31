@@ -1,10 +1,8 @@
-import { useCallback } from 'react';
+import { forwardRef, useCallback, useImperativeHandle } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Button from '../SharedElements/Button';
 import TestimonialCard from './TestimonialCard';
 
-const TestimonialSlider = ({ testimonials, onNext, onPrev }) => {
+const TestimonialSlider = forwardRef(({ testimonials }, ref) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     skipSnaps: false,
@@ -17,18 +15,21 @@ const TestimonialSlider = ({ testimonials, onNext, onPrev }) => {
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
-    if (onPrev) onPrev();
-  }, [emblaApi, onPrev]);
+  }, [emblaApi]);
 
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
-    if (onNext) onNext();
-  }, [emblaApi, onNext]);
+  }, [emblaApi]);
+
+  useImperativeHandle(ref, () => ({
+    scrollNext,
+    scrollPrev,
+  }));
 
   return (
-    <div className="relative pt-20">
-      <div className="p-6 overflow-hidden" ref={emblaRef}>
-        <div className="flex flex-row gap-6">
+    <div className="pt-4 md:pt-12 ">
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex flex-row gap-6 py-6">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="flex-none">
               <TestimonialCard {...testimonial} />
@@ -36,22 +37,9 @@ const TestimonialSlider = ({ testimonials, onNext, onPrev }) => {
           ))}
         </div>
       </div>
-
-      <div className="absolute right-0 flex items-center justify-center hidden gap-6 -top-14 lg:inline-flex">
-        <Button
-          onClick={scrollPrev}
-          text=""
-          size="md"
-          iconLeft={<ChevronLeft />}
-        />
-        <Button
-          onClick={scrollNext}
-          size="md"
-          text=""
-          iconRight={<ChevronRight />}
-        />
-      </div>
     </div>
   );
-};
+});
+
+TestimonialSlider.displayName = 'TestimonialSlider';
 export default TestimonialSlider;

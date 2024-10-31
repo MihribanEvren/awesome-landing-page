@@ -43,15 +43,19 @@ const Button = ({
       iconSize: 'w-7 h-7',
     },
   };
+  const colorVariants = {
+    'amber-900': 'text-amber-900 border-amber-900',
+  };
 
   const getButtonStyles = () => {
     const sizeStyle = sizeStyles[size] || sizeStyles.m;
+    const colorClasses = colorVariants[color] || colorVariants['amber-900'];
 
     if ((iconLeft || iconRight) && !text && !children) {
       const baseStyles = `flex items-center justify-center rounded-full text-${color} bg-transparent`;
 
       if (outline) {
-        return `${baseStyles} ${sizeStyle.iconButton} border-2 border-${color}`;
+        return `${baseStyles} ${sizeStyle.iconButton} border-2 ${colorClasses}`;
       }
       return `${baseStyles} ${sizeStyle.iconButton}`;
     }

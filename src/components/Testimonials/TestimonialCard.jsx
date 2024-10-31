@@ -1,19 +1,21 @@
 const TestimonialCard = ({ logo, description, person }) => {
   return (
-    <div className="flex flex-col h-[430px] w-[384px] p-8 bg-white rounded-2xl shadow-lg">
-      <div className="py-4">
-        <img src={logo} alt="Company logo" className="w-32 h-8" />
+    <div className="flex flex-col w-[319px] h-[296px] md:h-[430px] md:w-[384px] p-4 md:p-8 bg-white rounded-2xl shadow-lg">
+      <div className="w-full h-16 py-4 md:my-6">
+        <img src={logo} alt="Company logo" className="" />
       </div>
 
-      <p className="flex-grow text-2xl leading-relaxed">{description}</p>
+      <div className="flex-1">
+        <p className="text-base leading-relaxed md:text-2xl">{description}</p>
+      </div>
 
-      <div className="flex items-center mt-4 space-x-3">
+      <div className="flex items-center pt-4 space-x-3">
         <img
           src={person.avatar}
           alt={person.name}
           className="object-cover w-16 h-16 rounded-full"
         />
-        <div>
+        <div className="flex-1 min-w-0">
           <h4 className="text-lg font-medium leading-relaxed text-gray-900">
             {person.name}
           </h4>

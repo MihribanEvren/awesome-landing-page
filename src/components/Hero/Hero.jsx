@@ -5,10 +5,10 @@ const Hero = () => {
   return (
     <div className="">
       <div className="py-20 ">
-        <div className="flex items-center justify-between">
-          <div className="py-20 mr-20">
-            <div className="flex flex-col max-w-2xl gap-y-8">
-              <h1 className="font-extrabold text-slate-900 text-7xl">
+        <div className="flex flex-col items-center justify-between md:flex-row">
+          <div className="md:py-20 md:mr-20 ">
+            <div className="flex flex-col max-w-2xl text-center gap-y-8 md:text-start">
+              <h1 className="text-[56px] font-extrabold text-slate-900 md:text-7xl  leading-[1.1]">
                 Collectible Sneakers
               </h1>
               <p className="text-lg text-slate-900">
@@ -16,13 +16,13 @@ const Hero = () => {
                 suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum
                 ultrices amet.
               </p>
-              <div className="flex items-center justify-start gap-x-4">
+              <div className="flex items-center justify-center md:justify-start gap-x-4">
                 <Button size="l"></Button>
                 <Button text="Watch Demo" outline={false}></Button>
               </div>
             </div>
           </div>
-          <div className="h-full">
+          <div className="h-full mt-12 md:mt-0">
             <img src={Sneaker} alt="Sneaker image" />
           </div>
         </div>

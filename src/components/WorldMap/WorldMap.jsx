@@ -5,8 +5,11 @@ import image from '../../assets/images/ImageInWorldMap.png';
 function WorldMap() {
   return (
     <div className="flex items-center justify-center h-screen">
-      <div className="relative " style={{ width: '1049px', height: '633px' }}>
-        <div className="absolute w-[1049px] h-[633px]">
+      <div
+        className="relative w-full h-full"
+        style={{ width: '1049px', height: '633px' }}
+      >
+        <div className="absolute w-full h-full">
           <img
             src={map}
             alt=""
@@ -16,9 +19,11 @@ function WorldMap() {
         </div>
 
         <div className="absolute text-white transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-          <div className="flex flex-col items-center justify-center">
-            <p className="font-extrabold leading-tight text-8xl">11,658,467</p>
-            <p className="text-[56px] font-extrabold leading-tight">
+          <div className="flex flex-col items-center justify-center text-center">
+            <p className="text-5xl font-extrabold leading-tight md:text-8xl">
+              11,658,467
+            </p>
+            <p className="text-3xl md:text-[56px] font-extrabold leading-tight">
               Shoes Collected
             </p>
           </div>

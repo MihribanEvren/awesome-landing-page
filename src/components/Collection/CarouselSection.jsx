@@ -19,25 +19,23 @@ const CarouselSection = () => {
   ];
 
   return (
-    <section className="w-full ">
-      <div className="mx-auto ">
-        <div className="md:hidden">
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-4">
-              {navItems.map((item, index) => (
-                <div key={index} className="flex-[0_0_auto] ">
-                  <NavigationButton icon={item.icon} text={item.text} />
-                </div>
-              ))}
-            </div>
+    <section className="">
+      {/* Mobile Carousel */}
+      <div className="md:hidden">
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex gap-4">
+            {navItems.map((item, index) => (
+              <NavigationButton key={index} icon={item.icon} text={item.text} />
+            ))}
           </div>
         </div>
+      </div>
 
-        <div className="flex flex-col hidden pl-20 md:block">
-          {navItems.map((item, index) => (
-            <NavigationButton key={index} icon={item.icon} text={item.text} />
-          ))}
-        </div>
+      {/* Desktop */}
+      <div className="hidden md:block">
+        {navItems.map((item, index) => (
+          <NavigationButton key={index} icon={item.icon} text={item.text} />
+        ))}
       </div>
     </section>
   );

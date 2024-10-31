@@ -1,8 +1,10 @@
 import useEmblaCarousel from 'embla-carousel-react';
 import NavigationButton from './NavigationButton';
 import { Search, Shield, Rocket, Monitor, Disc, Settings } from 'lucide-react';
+import { useState } from 'react';
 
 const CarouselSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
   const [emblaRef] = useEmblaCarousel({
     align: 'start',
     skipSnaps: false,
@@ -25,7 +27,13 @@ const CarouselSection = () => {
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex gap-4">
             {navItems.map((item, index) => (
-              <NavigationButton key={index} icon={item.icon} text={item.text} />
+              <NavigationButton
+                key={index}
+                icon={item.icon}
+                text={item.text}
+                isActive={activeIndex === index}
+                onClick={() => setActiveIndex(index)}
+              />
             ))}
           </div>
         </div>
@@ -34,7 +42,13 @@ const CarouselSection = () => {
       {/* Desktop */}
       <div className="hidden md:block">
         {navItems.map((item, index) => (
-          <NavigationButton key={index} icon={item.icon} text={item.text} />
+          <NavigationButton
+            key={index}
+            icon={item.icon}
+            text={item.text}
+            isActive={activeIndex === index}
+            onClick={() => setActiveIndex(index)}
+          />
         ))}
       </div>
     </section>

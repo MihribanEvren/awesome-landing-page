@@ -5,42 +5,36 @@ import image from '../../assets/images/ImageInWorldMap.png';
 function WorldMap() {
   return (
     <div className="flex items-center justify-center h-screen">
-      <div
-        className="relative w-full h-full"
-        style={{ width: '1049px', height: '633px' }}
-      >
-        <div className="absolute w-full h-full">
+      <div className="relative flex flex-col items-center w-full h-full">
+        <div className="absolute inset-0 flex items-center justify-center">
           <img
             src={map}
             alt=""
-            className="object-contain opacity-50"
+            className="object-contain w-full h-full opacity-50"
             aria-hidden="true"
           />
         </div>
 
-        <div className="absolute text-white transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-          <div className="flex flex-col items-center justify-center text-center">
-            <p className="text-5xl font-extrabold leading-tight md:text-8xl">
-              11,658,467
-            </p>
-            <p className="text-3xl md:text-[56px] font-extrabold leading-tight">
-              Shoes Collected
-            </p>
-          </div>
-        </div>
-        <div className="absolute ">
+        <div className="z-10 flex flex-col items-center max-w-xs text-center md:max-w-md">
           <ImageContainer showButtons={false}>
             <img
               src={image}
               alt="Image in World Map"
-              className="relative object-cover w-64 h-auto rounded-xl"
+              className="relative object-contain w-48 h-auto md:w-64 rounded-xl"
             />
           </ImageContainer>
-          <div className="absolute p-3 bg-gray-300 rounded-b-md">
-            <p className="max-w-64">
-              Emma Simpson collected one pair of Cool Shoes.
-            </p>
+          <div className="p-2 mt-2 text-xs bg-gray-300 rounded-b-md md:p-3 md:text-sm">
+            <p>Emma Simpson collected one pair of Cool Shoes.</p>
           </div>
+        </div>
+
+        <div className="z-10 mt-4 text-center text-white">
+          <p className="text-3xl font-extrabold leading-tight md:text-5xl lg:text-6xl">
+            11,658,467
+          </p>
+          <p className="text-lg font-extrabold md:text-2xl lg:text-4xl">
+            Shoes Collected
+          </p>
         </div>
       </div>
     </div>

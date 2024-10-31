@@ -21,7 +21,7 @@ function Navbar() {
   return (
     <nav className="relative px-4 md:px-20 bg-amber-50">
       <div className="flex items-center justify-between h-24">
-        <div className="cursor-pointer">
+        <div className="mr-8 cursor-pointer">
           <h1 className="font-bold text-amber-900 text-heading-5">Collers</h1>
         </div>
 
@@ -43,7 +43,7 @@ function Navbar() {
 
       {isOpen && (
         <div className="absolute left-0 right-0 shadow-md md:hidden top-24 bg-amber-50">
-          <div className="flex flex-col items-center py-6 space-y-4">
+          <div className="flex flex-col items-center pb-6 space-y-1">
             {menuItems.map((item, index) => (
               <Button
                 key={index}

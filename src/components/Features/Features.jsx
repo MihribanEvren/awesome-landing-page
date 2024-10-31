@@ -24,7 +24,7 @@ const Features = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-start w-full gap-20 py-20 md:flex-row">
+    <div className="flex flex-col items-center justify-start w-full gap-20 pt-20 mt-20 md:flex-row">
       {features.map((feature, index) => (
         <FeatureCard
           key={index}

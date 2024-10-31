@@ -12,8 +12,6 @@ function BestProducts() {
         <Button size="xl" color="gray-50"></Button>
       </div>
       <div>
-        {/* backlights */}
-
         <div className="text-white ">
           <div className="flex flex-col items-center justify-center gap-12 md:flex-row">
             {Products.map((product) => (

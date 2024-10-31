@@ -1,3 +1,4 @@
+import { LuShoppingCart } from 'react-icons/lu';
 import Button from '../SharedElements/Button';
 
 const ProductCard = ({ title, description, image }) => {
@@ -13,7 +14,12 @@ const ProductCard = ({ title, description, image }) => {
       </div>
 
       <div className="p-8">
-        <Button full={true} text="Buy Now" color="white"></Button>
+        <Button
+          full={true}
+          text="Buy Now"
+          color="white"
+          iconLeft={<LuShoppingCart />}
+        ></Button>
       </div>
     </div>
   );

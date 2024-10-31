@@ -3,7 +3,6 @@
           viewBox="0 0 full full"
           preserveAspectRatio="xMidYMid meet"
         >
-          {/* Boş çemberler */}
           <circle
             cx="524"
             cy="210"

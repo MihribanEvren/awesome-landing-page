@@ -1,6 +1,13 @@
 import useEmblaCarousel from 'embla-carousel-react';
 import NavigationButton from './NavigationButton';
-import { Search, Shield, Rocket, Monitor, Disc, Settings } from 'lucide-react';
+import {
+  FaSearch,
+  FaShieldAlt,
+  FaRocket,
+  FaDesktop,
+  FaCompactDisc,
+  FaCog,
+} from 'react-icons/fa';
 import { useState } from 'react';
 
 const CarouselSection = () => {
@@ -12,17 +19,16 @@ const CarouselSection = () => {
   });
 
   const navItems = [
-    { icon: Search, text: 'Bibendum tellus' },
-    { icon: Shield, text: 'Cras eget' },
-    { icon: Rocket, text: 'Dolor pharetra' },
-    { icon: Monitor, text: 'Amet, fringilla' },
-    { icon: Disc, text: 'Amet nibh' },
-    { icon: Settings, text: 'Sed velit' },
+    { icon: FaSearch, text: 'Bibendum tellus' },
+    { icon: FaShieldAlt, text: 'Cras eget' },
+    { icon: FaRocket, text: 'Dolor pharetra' },
+    { icon: FaDesktop, text: 'Amet, fringilla' },
+    { icon: FaCompactDisc, text: 'Amet nibh' },
+    { icon: FaCog, text: 'Sed velit' },
   ];
 
   return (
     <section className="">
-      {/* Mobile Carousel */}
       <div className="md:hidden">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex gap-4">
@@ -39,7 +45,6 @@ const CarouselSection = () => {
         </div>
       </div>
 
-      {/* Desktop */}
       <div className="hidden md:block">
         {navItems.map((item, index) => (
           <NavigationButton

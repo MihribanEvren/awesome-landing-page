@@ -60,7 +60,7 @@ const Button = ({
       return `${baseStyles} ${sizeStyle.iconButton}`;
     }
 
-    const baseStyles = `flex items-center justify-center rounded-lg text-${color} bg-transparent leading-6`;
+    const baseStyles = ` flex items-center justify-center rounded-lg text-${color} bg-transparent leading-6`;
     const selectedSizeStyle = !full
       ? sizeStyle.button
       : 'w-full p-4 text-xl font-medium';

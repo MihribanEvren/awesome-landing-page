@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState } from 'react';
+import { FiMenu, FiX } from 'react-icons/fi';
 import Button from '../SharedElements/Button';
 
 function Navbar() {
@@ -36,7 +36,7 @@ function Navbar() {
             onClick={toggleMenu}
             className="text-amber-900 focus:outline-none"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
         </div>
       </div>

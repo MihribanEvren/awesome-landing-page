@@ -2,7 +2,7 @@ import TestimonialSlider from './TestimonialSlider ';
 import testimonialData from '../../data/Testimonials';
 import { useRef } from 'react';
 import Button from '../SharedElements/Button';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 function Testimonials() {
   const sliderRef = useRef(null);
@@ -31,13 +31,13 @@ function Testimonials() {
             onClick={handlePrev}
             text=""
             size="md"
-            iconLeft={<ChevronLeft />}
+            iconLeft={<FaChevronLeft />}
           />
           <Button
             onClick={handleNext}
             size="md"
             text=""
-            iconRight={<ChevronRight />}
+            iconRight={<FaChevronRight />}
           />
         </div>
       </div>

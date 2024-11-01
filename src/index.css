@@ -8,3 +8,13 @@ body {
   box-sizing: border-box;
   @apply font-sans;
 }
+
+.rectangle-background {
+  clip-path: polygon(0 55%, 100% 30%, 100% 100%, 0% 100%);
+}
+
+@media (min-width: 768px) {
+  .rectangle-background {
+    clip-path: polygon(100% 18%, 100% 100%, 0 100%);
+  }
+}

@@ -3,6 +3,7 @@ import Features from '../components/Features/Features';
 import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Header/Navbar';
 import Hero from '../components/Hero/Hero';
+import ReactangleLayout from '../components/Layout/RectangleLayout';
 import SectionLayout from '../components/Layout/SectionLayout';
 import BestProducts from '../components/Products/BestProducts';
 import Testimonials from '../components/Testimonials/Testimonials';
@@ -14,15 +15,16 @@ function Home() {
     <>
       <Navbar />
       {/* <div
-        className="absolute top-30 right-0 w-full h-[806px] transform bg-yellow-200"
+        className="z-10 absolute top-48 right-0 w-full h-[806px] transform bg-yellow-100"
         style={{
           clipPath: 'polygon(100% 16%, 0 100%, 100% 100%)',
         }}
       ></div> */}
-      <SectionLayout className="bg-amber-50">
+
+      <ReactangleLayout className="bg-amber-50">
         <Hero />
         <Features />
-      </SectionLayout>
+      </ReactangleLayout>
 
       <SectionLayout className="bg-bgDark">
         <BestProducts />

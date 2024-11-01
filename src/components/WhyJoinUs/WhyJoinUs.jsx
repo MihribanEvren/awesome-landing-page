@@ -1,6 +1,6 @@
 import Button from '../SharedElements/Button';
 import Video from '../../assets/images/Video.png';
-import { Check } from 'lucide-react';
+import { AiOutlineCheck } from 'react-icons/ai';
 import ImageContainer from '../SharedElements/ImageContainer';
 import PlayOverlay from '../SharedElements/PlayOverlay';
 
@@ -13,15 +13,15 @@ function WhyJoinUs() {
         </h3>
         <ul className="flex flex-col items-start justify-center gap-2 text-base md:text-xl text-slate-900 leading-[180%] px-2 md:p-0">
           <div className="flex items-start gap-2">
-            <Check size={18} className="mt-2 text-green-700" />
+            <AiOutlineCheck size={18} className="mt-1.5 text-green-700" />
             <li>Est et in pharetra magna adipiscing ornare aliquam.</li>
           </div>
           <div className="flex items-start gap-2">
-            <Check size={18} className="mt-2 text-green-700" />
+            <AiOutlineCheck size={18} className="mt-1.5 text-green-700" />
             <li>Tellus arcu sed consequat ac velit ut eu blandit.</li>
           </div>
           <div className="flex items-start gap-2">
-            <Check size={18} className="mt-2 text-green-700" />
+            <AiOutlineCheck size={18} className="mt-1.5 text-green-700" />
             <li>Ullamcorper ornare in et egestas dolor orci.</li>
           </div>
         </ul>
@@ -36,7 +36,7 @@ function WhyJoinUs() {
             alt="Video thumbnail"
             className="w-full rounded-b-xl"
           />
-          <PlayOverlay size={96} />
+          <PlayOverlay size={64} />
         </ImageContainer>
       </div>
     </div>

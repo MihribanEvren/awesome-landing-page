@@ -1,7 +1,10 @@
-function FeatureCard({ icon, title, description }) {
+function FeatureCard({ shape, icon, title, description }) {
   return (
     <div className="flex flex-col items-center justify-center gap-4 md:items-start">
-      <div>{icon}</div>
+      <div className="relative">
+        <div className="absolute top-0 w-45 h-45 -right-5">{shape}</div>
+        <div>{icon}</div>
+      </div>
       <div className="text-xl font-medium leading-tight text-slate-900">
         <h1>{title}</h1>
       </div>

@@ -1,6 +1,6 @@
 ## 🌟 Responsive and Modern Landing Page
 
-Fully responsive and modern landing page ui designed for showcasing features or products. Built with React and Tailwind.
+Fully **responsive** and **modern** landing page designed for showcasing features or products. Built with **React** and **Tailwind**.
 
 ### 🚀 Live Demo:
 
